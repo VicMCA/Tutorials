@@ -18,6 +18,16 @@ Instruções para git
 |>>  `git add "arquivo.extensão"` *(executar sem aspas)*  
 *   Adiciona o arquivo para a monitoração de mudanças  
 
+|>>  `git add .`  
+*   Adiciona todos os arquivos para a monitoração de mudanças  
+
+|>> `git rm "arquivo.extensão` *(executar sem aspas)*  
+*   Remove o arquivo da monitoração de mudanças  
+
+|>> `git rm .`  
+*   Remove todos os arquivos da monitoração de mudanças  
+*   Útil para caso você queira dar um "refresh all" no repositório  
+
 |>>  `git status`  
 *   Verifica o status atual git, mudanças que ocorreram, commits, etc  
 
@@ -61,6 +71,21 @@ Instruções para git
 
 |>> `git pull`  
 *   Baixa do github as atualizações para a pasta no computador  
+
+|>> `git log`  
+*   Exibe últimos commits realizados  
+
+|>> `git archive`  
+*   Gera um arquivo .zip ou .tar da pasta atual  
+
+|>> `git gc`  
+*   Realiza limpeza e otimização do repositório git  
+
+|>> `git fsck`  
+*   Confere o sistema de arquivos do git em busca de erros  
+
+|>> `git prune`  
+*   Remove objetos que não possuem mais conexão com a branch
 
 * Para limpar e fazer re-upload do repositório remoto (github no meu caso):  
 
