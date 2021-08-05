@@ -51,7 +51,7 @@ Instruções para git
 *   Cria e entra em uma nova branch do projeto  
 
 |>> `git checkout main`  
-*   Volta para a branch "main"  
+*   Volta para a branch "main" (ou outra branch que deseje)  
 
 |>> `git merge nova-feature`  
 *   Traz o conteúdo da branch "nova-feature" para a branch "main"  
