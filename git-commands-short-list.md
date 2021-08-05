@@ -1,10 +1,16 @@
   
-###### Placeholder para o projeto. Realoquei as istruções dgit how to" para cá.
+###### Lista curta de comandos do git
 
 Instruções para git
 *   Em arquivos markdown, espaço duplo pula linha "  "  
 *   Use estrela única para itálico, dupla para bold, tripla para itálico + bold  
 *   Coisas entre acento grave ` são código  
+
+|>> `git config --global user.name "nome"`  
+*   Configura o seu nome para os commits
+
+|>> `git config --global user.email "endereço@de.email"`  
+*   Configura seu email para os commits
 
 |>>  `git init`  
 *   Inicializa git na pasta atualmente selecionada*  
