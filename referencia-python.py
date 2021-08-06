@@ -512,7 +512,7 @@ def funcao_for():
     print('\nBem vindo(a) à seção do Loop For\n')
 
     a, b, c, d, e = [float(x) for x in input('Informe 5 números quaisquer de 0 a 10 separados por espaço: ').split()]
-    str1, str2, str3, str4, str5 = input('Informe cinco palavras separadas por espaço: ').split()
+    str1, str2, str3, str4, str5 = input('Informe cinco palavras de no mínimo 4 letras, separadas por espaço: ').split()
 
     '''
     Enquanto o while é utilizado para iterar um código de acordo com um número arbitrário de vezes,
