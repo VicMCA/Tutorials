@@ -1001,7 +1001,7 @@ def funcao_indice():
 
     print(indexList.replace('    ', ''))
 
-    index = str(input('\nPara qual exemplo deseja ir? Digite um número inteiro de 1 à 15: '))
+    index = str(input('\nPara qual exemplo deseja ir? Digite um número inteiro de 1 à 18: '))
 
     if index == '1':
         funcao_math()
