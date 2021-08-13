@@ -7,10 +7,34 @@ def main():
     O mesmo vale pra outras funções também. Aspas duplas são a forma recomendada.
     """
 
-    print('\nBem-vindo(a) ao guia rápido de "Como Fazer X" em Python.')
-    print('Este é um arquivo de exemplos para servir de referência sobre como fazer diversas coisas.')
-    print('As explicações se encontram nos comentários deste código.')
-    start = str(input('Vamos conferir o índice? s/n >> '))
+    print('\nBem-vindo(a) ao guia rápido de "Como Fazer X" em Python.\n'
+    +'Este é um guia com exemplos para servir de referência sobre como fazer diversas coisas.\n'
+    +'As explicações se encontram nos comentários deste código.\n'
+    +'Antes de começarmos, vou pedir que você insira algumas informações para usarmos nos exemplos.')
+
+    inicio = str(input('Caso deseje encerrar o programa, digite "q". Para continuar aperte "enter": '))
+    inicio = inicio.lower()
+    if inicio == 'q':
+        exit('Okay, saindo do exemplo. Até mais~')
+    
+    ''' Abaixo (e acima) vemos o uso de algumas ferramentas que veremos nos capítulos a seguir, entre elas:
+    1. Atribuição de variáveis, explicada no módulo de "Manipulação de tipos"
+    2. Estrutura de repetição "for", explicada em seu módulo "Sistemas de repetição: for"
+    3. Recebendo dados do usuário com "input()", também explicada em seu módulo "Inputs do Usuário"
+    4. A função ".split()", explicada no módulo sobre "Inputs do Usuário"
+    5. Criação de tuplas, explicada em seu módulo "Estruturas de dados: Tuplas"
+    6. Uso de estruturas condicionais no módulo "Sistemas de decisão if/else/elif"
+    7. Chamada de funções, no módulo "Funções" '''
+
+    a, b, c, d, e = [int(x) for x in input('Digite cinco números inteiros separados por espaço:\n>> ').split()]
+    inteiros = (a, b, c, d, e)
+    v, w, x, y, z = [float(x) for x in input('Digite cinco números reais separados por espaço:\n>> ').split()]
+    reais = (v, w, x, y, z)
+    w1, w2,  w3, w4, w5 = input('Digite cinco palavras com mais de 4 letras, separados por espaço:\n>> ').split()
+    palavras = (w1, w2, w3, w4, w5)
+    frase = input('Digite uma frase que contenha pelo menos uma das palavras informadas:\n>> ')
+
+    start = str(input('Muito bem! Vamos agora conferir o índice? s/n >> '))
 
     if start == 'n':
         exit('Okay, saindo do exemplo. Até mais~')
@@ -18,73 +42,74 @@ def main():
     funcao_indice()
 
 
-def funcao_math():
+def math(integers = (0, 0, 0, 0, 0), reals = (0, 0, 0, 0, 0)):
     """
     Esta função serve para exemplo de diversas operações matemáticas possíveis e suas sintaxes.
     """
     print('\nBem vindo(a) à seção de Operações Matemáticas\n')
-    intro =  '''Vou pedir que informe pelo menos quatro números inteiros e quatro reais
-    para podermos demonstrar algumas das possíveis operações. Podem ser negativos.'''
-    print(intro.replace('    ', ''))
 
-    # Aqui aproveito para utilizar a função split() para receber multiplos inputs ao mesmo tempo.
+    a, b, c, d, e = [integers[x] for x in integers]
+    v, w, x, y, z = [reals[x] for x in reals]
 
-    a, b, c, d = [int(x) for x in input('Informe quatro números inteiros separados por espaço: ').split()]
+    # Acima estamos criando variáveis a partir de elementos em uma lista. Vemos isso em outro módulo.
 
-    # Outra forma de solicitar uma função split abaixo. Não funciona para especificar o tipo
-    # O Python majoritariamente entende se tratarem de strings, então vou convertê-los depois.
-
-    w, x, y, z = input('Informe agora quatro números reais separados por espaço: ').split()
-
-    usrInput = (f'''Os números informados foram:
-    a = {a}\tb = {b}\tc = {c}\td = {d}
-    w = {w}\tx = {x}\ty = {y}\tz = {z}
-    E abaixo faremos algumas operações básicas com eles.\n''')
-    print(usrInput.replace('    ', ''))
-
-    # Logo abaixo, garantimos que os números w, x, y e z serão floats.
-
-    w = float(w)
-    x = float(x)
-    y = float(y)
-    z = float(z)
+    print(f'Os números informados foram:'
+    +f'a = {a}\tb = {b}\tc = {c}\td = {d}\te = {e}'
+    +f'v = {v}\tw = {w}\tx = {x}\ty = {y}\tz = {z}'
+    +'E abaixo faremos algumas operações básicas com eles.\n')
 
     # Para adição, apenas somamos os números no formato de n1 + n2, como no exemplo abaixo:
-    print(f'Adição: {a} + {b} = {a + b}')
-
+    print(f'Adição: {a} + {b} = {a + b} | {c} + {d} + {e} = {c + d + e}')
+    print(f'Adição: {v} + {w} = {v + w} | {x} + {y} + {z} = {x + y + z}')
+    print('\n')
     # Para subtração é igualmente simples, n1 - n2, como abaixo:
-    print(f'Subtração: {c} - {d} = {c - d}')
-
+    print(f'Subtração: {e} - {d} = {e - d} | {c} - {b} - {a} = {c - b - a}')
+    print(f'Subtração: {z} - {y} = {z - y} | {x} - {w} - {v} = {x - w - v}')
+    print('\n')
     # Para multiplicação, n1 * n2:
-    print(f'Multiplicação: {a} * {c} = {a * c}')
-
-    # Para divisão, n1 / n2 ou n1 // n2 para termos resultado arredondado:
-    print(f'Divisão: {d} / {b} = {d / b}')
-    print(f'Divisão com algarismo inteiro: {d} // {b} = {d // b}')
-
+    print(f'Multiplicação: {e} * {a} = {e * a} | {x} * {b} * {y} = {x * b * y}')
+    print(f'Multiplicação: {v} * {z} = {v * z} | {c} * {w} * {d} = {c * w * d}')
+    print('\n')
+    # Para divisão, n1 / n2:
+    print(f'Divisão: {d} / {b} = {d / b} | {e} / {c} / {a} = {e / c / a}')
+    print(f'Divisão: {y} / {w} = {y / w} | {z} / {x} / {v} = {z / x / v}')
+    print('\n')
+    # Alternativamente, n1 // n2 para termos resultado arredondado:
+    print(f'Divisão com resultado arredondado: {d} // {b} = {d // b} | {e} // {c} // {a} = {e // c // a}')
+    print(f'Divisão com resultado arredondado: {y} // {w} = {y // w} | {z} // {x} // {v} = {z // x // v}')
+    print('\n')
     # Para módulo, n1 % n2:
     print(f'Módulo: {a} % 2 = {a % 2}')
+    print(f'Módulo: {b} % {c} = {b % c}')
+    print('\n')
 
     "Abaixo veremos exponenciação, radicação, percentagem e arredondamento."
 
-    # Para exponenciação, pow(n1, n2), como abaixo:
-    print(f'Exponenciação: pow({b}, {c}) = {pow(b, c)}')
-    # Alternativamente, podemos usar n1 ** n2:
+    # Para exponenciação, podemos usar n1 ** n2:
     print(f'Exponenciação: {b} ** {c} = {b ** c}')
-
+    print(f'Exponenciação: {w} ** {x} = {w ** x}')
+    print('\n')
+    # Alternativamente usamos a função pow(n1, n2), como abaixo:
+    print(f'Exponenciação: pow({d}, {e}) = {pow(d, e)}')
+    print(f'Exponenciação: pow({y}, {z}) = {pow(y, z)}')
+    print('\n')
     # Usando pow(x, y) podemos calcular o módulo (restante de uma divisão) usando pow(x, y, z)
     # Neste caso, será o módulo de x^y quando dividido por z.
 
     # Para radicação, usamos n1 ** 1/n2:
     print(f'Radicação: {d} ** 1/{a} = {d ** 1/a}')
+    print(f'Radicação: {b} ** 1/{e} = {b ** 1/e}')
+
+    # Basicamente, elevamos um número à 1/outro número. Bastante versátil.
 
     # Existe uma função para raiz quadrada usando a biblioteca math, importando com 'import math'
     # Para chamar essa função se usa math.sqrt(x,y)
 
-    # Para percentual, usamos (n1 / 100) * n2
-    print(f'Percentual: ({a} * 100) / {d} = {(a * 100) / d}')
+    # Para percentual, usamos regra de 3, na fórmula "(percentagem / 100) * total"
+    print(f'Percentual "{a} por cento de {d}: ({a} / 100) * {d} = {(a / 100) * d}')
+    print(f'Percentual "{z} por cento de {c}: ({z} / 100) * {c} = {(z / 100) * c}')
 
-    # Para arredondamento, usamos round(n1, n2)
+    # Para arredondamento, usamos a função round(n1, n2)
     print(f'Arredondamento: round({w} * {x} + {y} / {z}, 2) = {round(w * x + y / z, 2)}')
     print(f'Sem arredondamento: ({w} * {x} + {y} / {z}, 2) = {w * x + y / z}')
 
@@ -974,34 +999,31 @@ def funcao_indice():
     Aqui temos o índice por completo, para melhor organização.
     """
 
-    indexList = ('''Confira abaixo o índice:
+    print('Confira abaixo o índice:\n\n'
+    +'~~  Tipos de Dados  ~~~~~~~~~~~~~~~~~~~~~~~~~\n'
+    +'[1]\t\tOperações matemáticas\n'
+    +'[2]\t\tManipulação de strings\n'
+    +'[3]\t\tOperadores booleanos (True/False)\n'
+    +'[4]\t\tManipulação de tipos\n'
+    +'~~  Sistemas de Decisão e repetição ~~~~~~~~~\n'
+    +'[5]\t\tSistemas de decisão if/else/elif\n'
+    +'[6]\t\tSistemas de repetição: while\n'
+    +'[7]\t\tSistemas de repetição: for\n'
+    +'~~  Estruturas de dados  ~~~~~~~~~~~~~~~~~~~~\n'
+    +'[8]\t\tEstruturas de dados: Listas\n'
+    +'[9]\t\tEstruturas de dados: Sets\n'
+    +'[10]\t\tEstruturas de dados: Tuplas\n'
+    +'[11]\t\tEstruturas de dados: Dicionários\n'
+    +'~~  Funções Básicas  ~~~~~~~~~~~~~~~~~~~~~~~~\n'
+    +'[12]\t\tInputs do Usuário\n'
+    +'[13]\t\tFunções\n'
+    +'[14]\t\tObjetos\n'
+    +'[15]\t\tClasses\n'
+    +'~~  Outros  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'
+    +'[16]\t\tData e hora\n'
+    +'[18]\t\tInformações Extra')
 
-    ~~  Tipos de Dados  ~~~~~~~~~~~~~~~~~~~~~~~~~
-    [1]\t\tOperações matemáticas
-    [2]\t\tManipulação de strings
-    [3]\t\tOperadores booleanos (True/False)
-    [4]\t\tManipulação de tipos
-    ~~  Sistemas de Decisão e repetição ~~~~~~~~~
-    [5]\t\tSistemas de decisão if/else/elif
-    [6]\t\tSistemas de repetição: while
-    [7]\t\tSistemas de repetição: for
-    ~~  Estruturas de dados  ~~~~~~~~~~~~~~~~~~~~
-    [8]\t\tEstruturas de dados: Listas
-    [9]\t\tEstruturas de dados: Sets
-    [10]\t\tEstruturas de dados: Tuples
-    [11]\t\tEstruturas de dados: Dictionaries
-    ~~  Funções Básicas  ~~~~~~~~~~~~~~~~~~~~~~~~
-    [12]\t\tInputs do Usuário
-    [13]\t\tFunções
-    [14]\t\tObjetos
-    [15]\t\tClasses
-    ~~  Outros  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    [16]\t\tData e hora
-    [18]\t\tInformações Extras''')
-
-    print(indexList.replace('    ', ''))
-
-    index = str(input('\nPara qual exemplo deseja ir? Digite um número inteiro de 1 à 18: '))
+    index = str(input('\nPara qual exemplo deseja ir? Digite um número inteiro de 1 à 18:\n>> '))
 
     if index == '1':
         funcao_math()
