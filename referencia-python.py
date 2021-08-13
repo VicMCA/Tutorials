@@ -39,7 +39,7 @@ def main():
     if start == 'n':
         exit('Okay, saindo do exemplo. Até mais~')
 
-    funcao_indice()
+    indice()
 
 
 def math(integers = (0, 0, 0, 0, 0), reals = (0, 0, 0, 0, 0)):
@@ -120,7 +120,7 @@ def math(integers = (0, 0, 0, 0, 0), reals = (0, 0, 0, 0, 0)):
     retorno_indice()
 
 
-def funcao_string():
+def string():
     """
     Aqui veremos como manipular strings.
     """
@@ -177,7 +177,7 @@ def funcao_string():
     retorno_indice()
 
 
-def funcao_bool():
+def boolean():
     """
     Nesta seção, veremos como funcionam operadores booleanos.
     """
@@ -237,7 +237,7 @@ def funcao_bool():
     retorno_indice()
 
 
-def funcao_types():
+def types():
     """
     Aqui veremos como manipular tipos.
     """
@@ -313,7 +313,7 @@ def funcao_types():
     retorno_indice()
 
 
-def funcao_ifelse():
+def ifelse():
     """
     Aqui veremos como utilizar os argumentos If e Else.
     """
@@ -424,7 +424,7 @@ def funcao_ifelse():
     retorno_indice()
 
 
-def funcao_while():
+def loopwhile():
     """
     Aqui veremos como utilizar o loop While.
     """
@@ -530,7 +530,7 @@ def funcao_while():
     retorno_indice()
 
 
-def funcao_for():
+def loopfor():
     """
     Aqui veremos como utilizar o loop For.
     """
@@ -674,7 +674,7 @@ def funcao_for():
     retorno_indice()
 
 
-def funcao_list():
+def lists():
     """
     Aqui veremos como utilizar Listas.
     """
@@ -913,7 +913,7 @@ def funcao_list():
     retorno_indice()
 
 
-def funcao_set():
+def sets():
     """
     Aqui veremos como utilizar Sets.
     """
@@ -922,7 +922,7 @@ def funcao_set():
     retorno_indice()
 
 
-def funcao_tuple():
+def tuples():
     """
     Aqui veremos como utilizar Tuples.
     """
@@ -931,7 +931,7 @@ def funcao_tuple():
     retorno_indice()
 
 
-def funcao_dict():
+def dictionary():
     """
     Aqui veremos como utilizar Dicionários.
     """
@@ -940,7 +940,7 @@ def funcao_dict():
     retorno_indice()
 
 
-def funcao_input():
+def inputs():
     """
     Aqui veremos como adquirir inputs do usuário.
     """
@@ -949,7 +949,7 @@ def funcao_input():
     retorno_indice()
 
 
-def funcao_func():
+def functions():
     """
     Aqui veremos como utilizar funções.
     """
@@ -958,7 +958,7 @@ def funcao_func():
     retorno_indice()
 
 
-def funcao_object():
+def objects():
     """
     Aqui veremos como funcionam Objetos.
     """
@@ -967,7 +967,7 @@ def funcao_object():
     retorno_indice()
 
 
-def funcao_class():
+def classes():
     """
     Aqui veremos como funcionam as Classes.
     """
@@ -976,7 +976,7 @@ def funcao_class():
     retorno_indice()
 
 
-def funcao_datetime():
+def datetime():
     """
     Aqui veremos as possíveis operações com datas e horas.
     """
@@ -985,7 +985,7 @@ def funcao_datetime():
     retorno_indice()
 
 
-def funcao_extras():
+def extras():
     """
     Aqui veremos coisas extras sobre seções anteriores que são menos comuns no aprendizado inicial.
     """
@@ -994,7 +994,7 @@ def funcao_extras():
     retorno_indice()
 
 
-def funcao_indice():
+def indice():
     """
     Aqui temos o índice por completo, para melhor organização.
     """
@@ -1026,39 +1026,39 @@ def funcao_indice():
     index = str(input('\nPara qual exemplo deseja ir? Digite um número inteiro de 1 à 18:\n>> '))
 
     if index == '1':
-        funcao_math()
+        math()
     elif index == '2':
-        funcao_string()
+        string()
     elif index == '3':
-        funcao_bool()
+        boolean()
     elif index == '4':
-        funcao_types()
+        types()
     elif index == '5':
-        funcao_ifelse()
+        ifelse()
     elif index == '6':
-        funcao_while()
+        loopwhile()
     elif index == '7':
-        funcao_for()
+        loopfor()
     elif index == '8':
-        funcao_list()
+        lists()
     elif index == '9':
-        funcao_set()
+        sets()
     elif index == '10':
-        funcao_tuple()
+        tuples()
     elif index == '11':
-        funcao_dict()
+        dictionary()
     elif index == '12':
-        funcao_input()
+        inputs()
     elif index == '13':
-        funcao_func()
+        functions()
     elif index == '14':
-        funcao_object()
+        objects()
     elif index == '15':
-        funcao_class()
+        classes()
     elif index == '16':
-        funcao_datetime()
+        datetime()
     elif index == '18':
-        funcao_extras()
+        extras()
     else:
         exit('Okay, saindo do exemplo. Até mais~')
 
@@ -1070,7 +1070,7 @@ def retorno_indice():
     back = str(input('\nVoltar para o indice? s/n >> '))
 
     if back == 's':
-        funcao_indice()
+        indice()
     else:
         exit('Okay, saindo do exemplo. Até mais~')
 
