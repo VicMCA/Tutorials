@@ -6,38 +6,49 @@ def types(integers, reals, words, sentence):
     """
     print('\nBem vindo(a) à seção de Manipulação de Tipos\n')
 
-    '''Nesta sessão veremos como manipular os tipos de variáveis, e como elas funcionam.
-    Antes de começarmos, vou pedir que me dê algumas variáveis de tipos específicos.'''
+    '''Nesta sessão veremos como manipular os tipos de variáveis, e como eles funcionam.
+    Antes de começarmos, vamos importar os valores de antes e converter para uma forma
+    mais prática: '''
 
-    str1 = str(input('Insira uma palavra qualquer ou frase, mas não exagere no tamanho: '))
-    a = int(input('Me informe agora um número inteiro, independente se é positivo ou negativo: '))
-    x = float(input('Por fim, me informe um número com casas decimais: '))
+    a, b, c, d, e = [int(x) for x in integers]
+    v, w, x, y, z = [float(x) for x in reals]
+    str1, str2, str3, str4, str5 = [str(x) for x in words]
+    frase = sentence
 
     '''Em Python trabalhamos com diversos tipos de dados diferentes.
-    Abaixo, uma lista deles para fins de curiosidade:'''
+    Abaixo, uma lista deles para fins de curiosidade:
 
-    print(f'Textos:\t\t\tStrings (str)')
-    print(f'Números:\t\tIntegers (int), Float (float), Complex (complex)')
-    print(f'Sequências:\t\tListas (list), Tuplas (tuple), Comprimentos (range)')
-    print(f'Mapeamentos:\tDicionários (dict)')
-    print(f'Sets:\t\t\tSets (set), Set Imutável (frozenset)')
-    print(f'Booleano:\t\tBool (bool)')
-    print(f'Binários:\t\tBytes (bytes), Array de Bytes (bytearray), Vista de Memória (memoryview)')
+    Textos:             Strings (str)
+    Números:            Integers (int), Float (float), Complex (complex)
+    Sequências:         Listas (list), Tuplas (tuple), Comprimentos (range)
+    Mapeamentos:        Dicionários (dict)
+    Sets:               Sets (set), Set Imutável (frozenset)
+    Booleano:           Bool (bool)
+    Binários:           Bytes (bytes), Array de Bytes (bytearray), Vista de Memória (memoryview)
+    '''
+
 
     '''
     Para descobrir o tipo de algum elemento, use a seguinte função:
     print(type(x))
 
-    Vamos fazer isso com os elementos que foram informados acima, mas vou usar um comando levemente
-    diferente, para que possamos ver as mudanças uma a uma:
-    print(str1, "=", type(str1)) =
+    Vamos fazer isso com alguns dos elementos que foram informados acima, mas 
+    vou usar um comando levemente diferente, para que possamos ver as mudanças uma a uma:
+    print(variavel, " = ", type(variavel)) =
     '''
 
-    print(str1, '=', type(str1))
-    print('print(a, "=", type(a)) = ')
-    print(a, '=', type(a))
-    print('print(x, "=", type(x)) = ')
-    print(x, '=', type(x))
+    print(str1, ' = ', type(str1))
+    print(str2, ' = ', type(str2))
+    print(str4, ' = ', type(str4))
+    print(a, ' = ', type(a))
+    print(d, ' = ', type(d))
+    print(e, ' = ', type(e))
+    print(x, ' = ', type(x))
+    print(y, ' = ', type(y))
+    print(v, ' = ', type(v))
+    print(frase, ' = ', type(frase))
+    print(integers, ' = ', type(integers))
+    print(words, ' = ', type(words))
 
     '''Neste exemplo vamos conferir o que é "Casting".
     Casting é basicamente converter um tipo para o outro.
@@ -51,26 +62,15 @@ def types(integers, reals, words, sentence):
 
     a = float(a)
     x = int(x)
+    z = str(z)
 
-    '''Voltando à programação normal abaixo:
-    print(a, "=", type(a)) = '''
     print(a, '=', type(a))
-    'print(x, "=", type(x)) = '
+    # A variável "a" agora é um número float, com .0 para o termo decimal
     print(x, '=', type(x))
+    # A variável "x" agora foi arredondada para um número int
+    print(z, '=', type(z))
+    # A variável "z" foi convertida para uma string
 
-    '''Note que ele arredondou o número 'x', e acrescentou um '.0' após o número 'a'.
-    Agora vamos converter ambos para strings:'''
-
-    a = str(a)
-    x = str(x)
-
-    '''Último resultado dos testes de laboratório abaixo:
-    print(a, "=", type(a)) = '''
-    print(a, '=', type(a))
-    'print(x, "=", type(x)) = '
-    print(x, '=', type(x))
-
-    '''E agora todos são strings.
-    Isto encerra o conteúdo sobre manipulações de tipos.'''
+    '''Isto encerra o conteúdo sobre tipos.'''
 
     retornoIndice.retorno(integers, reals, words, sentence)
