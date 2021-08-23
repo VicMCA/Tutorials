@@ -86,6 +86,30 @@ Instruções para git
 
 |>> `git prune`  
 *   Remove objetos que não possuem mais conexão com a branch
+  
+|>> `pwd`  
+*   Mostra o caminho do diretório atual  
+  
+|>> `ls`  
+*   Lista o conteúdo do diretório atual  
+  
+|>> `cd`  
+*   Change Directory - muda o diretório  
+
+|>> `cd ..`  
+*   Vai para o diretório acima  
+  
+|>> `mkdir`  
+*   Cria um diretório  
+  
+|>> `touch`  
+*   Cria um arquivo vazio  
+  
+|>> `mv`  
+*   Move um arquivo ou diretório  
+  
+|>> `cp`  
+*   Copia um arquivo ou diretório  
 
 * Para limpar e fazer re-upload do repositório remoto (github no meu caso):  
 

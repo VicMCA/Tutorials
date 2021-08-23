@@ -7,12 +7,15 @@ def ifelse(integers, reals, words, sentence):
     print('\nBem vindo(a) à seção de Sistemas de Decisão\n')
 
     ''' Usamos "if", "else" e "elif" para trabalharmos com condições.
-    Todas as condicionais podem ser usadas com operadores matemáticos e lógicos.
+    Todas as condicionais podem ser usadas com operadores matemáticSos e lógicos.
+    
     >= para maior ou igual    |   > para maior    |    == para igual   |
     <= para menor ou igual    |   < para menor    |    and para 'e'    |    or para 'ou'
-    O "if" é sempre utilizado no começo, e pode receber uma cláusula "elif" para else/if,
-    no qual devemos especificar também qual a próxima condição. O "else" pode ser utilizado
-    no final para todos os outros casos não abordados nos "if" e "elif" anteriores.
+    
+    O "if" é sempre utilizado no começo, e pode ser completado com "else" ou "elif".
+    A cláusula "elif" equivale a um  else if, no qual acrescentamos uma nova condição
+    caso a primeira não seja atendida. Por fim, o "else" é utilizado para todos os outros 
+    casos não abordados nos "if" e "elif" anteriores.
 
     Exemplo da sintaxe abaixo:
 
@@ -23,11 +26,13 @@ def ifelse(integers, reals, words, sentence):
     else:
         código a ser rodado
 
-    Vamos experimentar abaixo:
+    Vamos experimentar abaixo após importarmos os dados informados anteriormente:
     '''
 
-    a, b, c = [float(x) for x in input('Informe três números quaisquer separados por espaço: ').split()]
-    str1, str2, str3 = input('Informe três palavras separadas por espaço: ').split()
+    a, b, c, d, e = [int(x) for x in integers]
+    v, w, x, y, z = [float(x) for x in reals]
+    str1, str2, str3, str4, str5 = [str(x) for x in words]
+    frase = sentence
 
     'Vamos criar abaixo algumas decisões a serem tomadas com os elementos informados.'
 

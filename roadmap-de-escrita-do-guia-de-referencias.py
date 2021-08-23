@@ -33,13 +33,6 @@ def types():
     Aqui veremos como manipular tipos.
     """
 
-    back = str(input('\nVoltar para o indice? s/n >> '))
-
-    if back == 's':
-        indice()
-    else:
-        exit('Okay, saindo do exemplo. Até mais~')
-
 
 def ifelse():
     """
