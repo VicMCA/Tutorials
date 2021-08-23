@@ -1,10 +1,11 @@
   
-###### Lista curta de comandos do git
-
-Instruções para git
+#### Lista curta de comandos do git, prompt de comando e markdown
+  
 *   Em arquivos markdown, espaço duplo pula linha "  "  
 *   Use estrela única para itálico, dupla para bold, tripla para itálico + bold  
 *   Coisas entre acento grave ` são código  
+  
+Instruções para git  
 
 |>> `git config --global user.name "nome"`  
 *   Configura o seu nome para os commits
@@ -86,6 +87,8 @@ Instruções para git
 
 |>> `git prune`  
 *   Remove objetos que não possuem mais conexão com a branch
+  
+Instruções para linha de comando  
   
 |>> `pwd`  
 *   Mostra o caminho do diretório atual  
