@@ -98,21 +98,30 @@ Instruções para linha de comando
   
 |>> `cd`  
 *   Change Directory - muda o diretório  
-
+  
 |>> `cd ..`  
 *   Vai para o diretório acima  
   
-|>> `mkdir`  
+|>> `cd ~`  
+*   Vai para home  
+  
+|>> `mkdir nomeDaPasta`  
 *   Cria um diretório  
   
-|>> `touch`  
+|>> `touch nomeDoArquivo.extensao`  
 *   Cria um arquivo vazio  
   
-|>> `mv`  
+|>> `mv nomeDoArquivo.extensao nomeDaPasta`  
 *   Move um arquivo ou diretório  
   
-|>> `cp`  
+|>> `cp nomeDoArquivo.extensao nomeDaCopia.extensao`  
 *   Copia um arquivo ou diretório  
+  
+|>> `rm nomeDoArquivo/Pasta`  
+*   Deleta um arquivo ou diretório  
+  
+|>> `alias listaArquivosOcultos="ls -la"`  
+*   Cria um script pra os comandos "ls -la"  
 
 * Para limpar e fazer re-upload do repositório remoto (github no meu caso):  
 
