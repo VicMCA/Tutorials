@@ -72,10 +72,25 @@ Instruções para git
 
 |>> `git pull`  
 *   Baixa do github as atualizações para a pasta no computador  
-
+  
 |>> `git log`  
 *   Exibe últimos commits realizados  
-
+  
+|>> `git log --oneline`  
+*   Exibe versão resumida dos últimos commits realizados. Pode combinar com -all  
+  
+|>> `git log --all`  
+*   Exibe todos os detalhes dos últimos commits realizados. Pode combinar com --online  
+  
+|>> `git diff codigoDoCommit`  
+*   Exibe as diferenças do arquivo atual para a versão do código  
+  
+|>> `git checkout codigoDoCommit`  
+*   Retorna para o commit referenciado no código  
+  
+|>> `git switch nomeDaBranch`  
+*   Navega para a branch no nome referido  
+  
 |>> `git archive`  
 *   Gera um arquivo .zip ou .tar da pasta atual  
 
@@ -84,9 +99,15 @@ Instruções para git
 
 |>> `git fsck`  
 *   Confere o sistema de arquivos do git em busca de erros  
-
+  
 |>> `git prune`  
-*   Remove objetos que não possuem mais conexão com a branch
+*   Remove objetos que não possuem mais conexão com a branch  
+  
+|>> `git reset codigoDoCommit  --SOFT`  
+*   Reseta os commits até o referido, mas mantém os arquivos no stage   
+  
+|>> `git reset codigoDoCommit  --HARD`  
+*   Reseta os commits até o referido, e reseta TUDO até lá  
   
 Instruções para linha de comando  
   
