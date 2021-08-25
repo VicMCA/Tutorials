@@ -108,6 +108,15 @@ Instruções para git
   
 |>> `git reset codigoDoCommit  --HARD`  
 *   Reseta os commits até o referido, e reseta TUDO até lá  
+
+* Para limpar e fazer re-upload do repositório remoto (github no meu caso):  
+
+|>> `git checkout --orphan newBranch` *cria branch reserva*  
+|>> `git add -A` *adiciona arquivos e dá commit neles*  
+|>> `git commit -am "limpando repositório` *dá commit na limpeza*  
+|>> `git branch -D main` *deleta o conteúdo da main branch no repositório*  
+|>> `git branch -m main` *renomeia a branch reserva para main*  
+|>> `git push -f origin main` *envia os arquivos para o repositório*  
   
 Instruções para linha de comando  
   
@@ -143,12 +152,3 @@ Instruções para linha de comando
   
 |>> `alias listaArquivosOcultos="ls -la"`  
 *   Cria um script pra os comandos "ls -la"  
-
-* Para limpar e fazer re-upload do repositório remoto (github no meu caso):  
-
-|>> `git checkout --orphan newBranch` *cria branch reserva*  
-|>> `git add -A` *adiciona arquivos e dá commit neles*  
-|>> `git commit -am "limpando repositório` *dá commit na limpeza*  
-|>> `git branch -D main` *deleta o conteúdo da main branch no repositório*  
-|>> `git branch -m main` *renomeia a branch reserva para main*  
-|>> `git push -f origin main` *envia os arquivos para o repositório*  
