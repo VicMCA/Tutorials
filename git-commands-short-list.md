@@ -1,4 +1,3 @@
-  
 #### Lista curta de comandos do git, prompt de comando e markdown
   
 *   Em arquivos markdown, espaço duplo pula linha "  "  
@@ -8,10 +7,10 @@
 Instruções para git  
 
 |>> `git config --global user.name "nome"`  
-*   Configura o seu nome para os commits
+*   Configura o seu nome para os commits  
 
 |>> `git config --global user.email "endereço@de.email"`  
-*   Configura seu email para os commits
+*   Configura seu email para os commits  
 
 |>>  `git init`  
 *   Inicializa git na pasta atualmente selecionada*  

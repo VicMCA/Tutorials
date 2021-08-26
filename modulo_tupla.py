@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def tuples(integers, reals, words, sentence):
     """
@@ -8,4 +8,4 @@ def tuples(integers, reals, words, sentence):
 
     "PLACEHOLDER"
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

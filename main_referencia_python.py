@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import indice, retornoIndice
+import modulo_indice
 
 def main():
     """
@@ -47,7 +47,7 @@ def main():
     if start == 'n':
         exit('Okay, saindo do exemplo. Até mais~')
 
-    indice.indice(inteiros, reais, palavras, frase)
+    modulo_indice.indice(inteiros, reais, palavras, frase)
 
 
 if __name__ == '__main__':
@@ -56,6 +56,6 @@ if __name__ == '__main__':
     e não chamado como módulo de outro arquivo .py
 
     Para importar um outro arquivo .py você pode usar import arquivo
-    Para importar uma função de outro arquivo .py você pode usar import arquivo.funcao
+    Para importar uma fretorno_indiceunção de outro arquivo .py você pode usar import arquivo.funcao
     """
     main()

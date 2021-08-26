@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def string(integers, reals, words, sentence):
     """
@@ -91,34 +91,34 @@ def string(integers, reals, words, sentence):
 
     print(f'Frase original = {frase}')
     # ^ Vamos exibir a frase que informamos mais cedo
-    partesDaFrase = frase.split(' ')
+    partes_da_frase = frase.split(' ')
     ''' ^ Usamos .split() para separar a string em cada ocorrência do caractere entre áspas. 
-    Espaço nesse caso. É criada uma tupla com os itens, que aqui chamamos de "partesDaFrase"'''
-    print(f'partesDaFrase = frase.split(" ") = {partesDaFrase}')
+    Espaço nesse caso. É criada uma tupla com os itens, que aqui chamamos de "partes_da_frase"'''
+    print(f'partes_da_frase = frase.split(" ") = {partes_da_frase}')
     # ^ Resultado do uso da função .split() acima.
-    fraseJunta = ('').join(partesDaFrase)
-    print(f'fraseJunta = ("").join(partesDaFrase) = {fraseJunta}')
+    frase_junta = ('').join(partes_da_frase)
+    print(f'frase_junta = ("").join(partes_da_frase) = {frase_junta}')
     ''' ^ Acima utilizamos a função .join() para unir os elementos separados que
-    estão armazenados em "partesDaFrase. As áspas são necessárias, mesmo que não
+    estão armazenados em "partes_da_frase. As áspas são necessárias, mesmo que não
     desejemos nenhum caractere entre cada palavra'''
-    fraseNormal = (' ').join(partesDaFrase)
-    print(f'fraseNormal = (" ").join(partesDaFrase) = {fraseNormal}')
+    frase_normal = (' ').join(partes_da_frase)
+    print(f'frase_normal = (" ").join(partes_da_frase) = {frase_normal}')
     ''' ^ Dessa vez designamos espaços na função .join() para que entre cada palavra
-    seja inserindo um espaço. Desta forma, fraseNormal é o mesmo que "frase"'''
-    fraseMaiuscula = frase.upper()
-    print(f'fraseMaiuscula = frase.upper() = {fraseMaiuscula}')
+    seja inserindo um espaço. Desta forma, frase_normal é o mesmo que "frase"'''
+    frase_maiuscula = frase.upper()
+    print(f'frase_maiuscula = frase.upper() = {frase_maiuscula}')
     # ^ A função .upper() converte todos os caracteres para maiúsculas
-    fraseMinuscula = frase.lower()
-    print(f'fraseMinuscula = frase.lower() = {fraseMinuscula}')
+    frase_minuscula = frase.lower()
+    print(f'frase_minuscula = frase.lower() = {frase_minuscula}')
     # ^ A função .lower() converte todos os caracteres para minúsculas
-    fraseTitle = frase.title()
-    print(f'fraseTitle = frase.title() = {fraseTitle}')
+    frase_titulo = frase.title()
+    print(f'frase_titulo = frase.title() = {frase_titulo}')
     # ^ A função .title() deixa todas as palavras com apenas a primeira letra maiúscula
-    fraseCapitalizada = frase.capitalize()
-    print(f'fraseCapitalizada = frase.capitalize() = {fraseCapitalizada}')
+    frase_capitalizada = frase.capitalize()
+    print(f'frase_capitalizada = frase.capitalize() = {frase_capitalizada}')
     # ^ A função .capitalize() faz a string iniciar com maiúscula, e todo o resto é minúsculo
-    fraseSwap = fraseCapitalizada.swapcase()
-    print(f'fraseSwap = fraseCapitalizada.swapcase() = {fraseSwap}')
+    frase_swap = frase_capitalizada.swapcase()
+    print(f'frase_swap = frase_capitalizada.swapcase() = {frase_swap}')
     # ^ A função .swapcase() inverte maiúsculas e minúsculas.
     print(f'frase.count("a") = {frase.count("a")}')
     # ^ A função .count(termo) conta a quantidade de vezes que o elemento entre áspas aparece na string
@@ -133,4 +133,4 @@ def string(integers, reals, words, sentence):
     
     print('E isso é tudo sobre strings.')    
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def ifelse(integers, reals, words, sentence):
     """
@@ -98,11 +98,11 @@ def ifelse(integers, reals, words, sentence):
     # Neste caso, entre o primeiro else e o segundo if, é como se fosse incluso um elif.
 
     # Podemos também utilizar estas formas para atribuir variáveis, exemplos:
-    positivoA = True if a >= 0 else False
-    print(f'{a} é positivo.') if positivoA == True else print(f'{a} é negativo.')
+    positivo_a = True if a >= 0 else False
+    print(f'{a} é positivo.') if positivo_a == True else print(f'{a} é negativo.')
     # E para exibir o resultado do teste de verdadeiro ou falso.
-    parA = True if (a % 2 == 0) else False
-    print(f'{a} é par.') if parA == True else print(f'{a} é ímpar.')
+    par_a = True if (a % 2 == 0) else False
+    print(f'{a} é par.') if par_a == True else print(f'{a} é ímpar.')
     # Nestes exemplos, determinamos valores lógicos para se o número A é positivo ou não, e par ou não.
 
     '''Caso você tenha necessidade para um if que não dê retorno algum ou não faça nada,
@@ -113,4 +113,4 @@ def ifelse(integers, reals, words, sentence):
 
     '''E isso é tudo sobre sistemas de decisão com If, Else e Elif.'''
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

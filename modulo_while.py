@@ -1,6 +1,6 @@
-import retornoIndice
+import modulo_retorno
 
-def loopwhile(integers, reals, words, sentence):
+def loop_while(integers, reals, words, sentence):
     """
     Aqui veremos como utilizar o loop While.
     """
@@ -103,4 +103,4 @@ def loopwhile(integers, reals, words, sentence):
 
     'E com isso encerramos os exemplos da função while.'
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

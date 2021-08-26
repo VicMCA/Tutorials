@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def math(integers, reals, words, sentence):
     """
@@ -73,4 +73,4 @@ def math(integers, reals, words, sentence):
 
     print('E isso é tudo sobre operações aritméticas.')
 
-    return retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

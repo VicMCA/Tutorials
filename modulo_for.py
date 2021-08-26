@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def loopfor(integers, reals, words, sentence):
     """
@@ -141,4 +141,4 @@ def loopfor(integers, reals, words, sentence):
 
     'E com isso encerramos o conteúdo sobre Loops de For.'
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

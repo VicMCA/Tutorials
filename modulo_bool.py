@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def boolean(integers, reals, words, sentence):
     """
@@ -106,4 +106,4 @@ def boolean(integers, reals, words, sentence):
 
     print('E isso é tudo sobre operações booleanas.')
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def types(integers, reals, words, sentence):
     """
@@ -73,4 +73,4 @@ def types(integers, reals, words, sentence):
 
     '''Isto encerra o conteúdo sobre tipos.'''
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

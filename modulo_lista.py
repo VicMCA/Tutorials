@@ -1,4 +1,4 @@
-import retornoIndice
+import modulo_retorno
 
 def lists(integers, reals, words, sentence):
     """
@@ -87,30 +87,30 @@ def lists(integers, reals, words, sentence):
     mais alguns itens que listaremos aqui.
     '''
 
-    listaex01 = ['cuscuz','cafézinho', 'frutas', 'empada', 'suco', a, b, c, d, e]
+    lista_ex01 = ['cuscuz','cafézinho', 'frutas', 'empada', 'suco', a, b, c, d, e]
     # Os 5 primeiros itens são strings, os 5 finais são os números informados
-    print(listaex01[0])      # Exibirá (cuscuz)
+    print(lista_ex01[0])      # Exibirá (cuscuz)
     print('---------------------------------------\n')
-    print(listaex01[-4])     # Exibirá o segundo número que você informou
+    print(lista_ex01[-4])     # Exibirá o segundo número que você informou
     print('---------------------------------------\n')
-    print(listaex01[3:6])    # Exibirá 'empada', 'suco', e os dois primeiros números informados
+    print(lista_ex01[3:6])    # Exibirá 'empada', 'suco', e os dois primeiros números informados
     print('---------------------------------------\n')
-    print(listaex01[-1])     # Exibirá o último número informado
+    print(lista_ex01[-1])     # Exibirá o último número informado
     print('---------------------------------------\n')
-    print(listaex01[-7:-2])  # Exibirá 'empada', 'suco', e os três primeiros números indormados
+    print(lista_ex01[-7:-2])  # Exibirá 'empada', 'suco', e os três primeiros números indormados
     print('---------------------------------------\n')
-    print(4 * listaex01[8])  # Exibirá o resultado de 4 * o quarto número informado
+    print(4 * lista_ex01[8])  # Exibirá o resultado de 4 * o quarto número informado
     print('---------------------------------------\n')
-    print(listaex01[2])      # Exibirá 'frutas'
-    listaex01[2] = 'abacaxi' # Mudará 'frutas' para 'abacaxi'
-    print(listaex01[2])      # Exibirá 'abacaxi' como novo item do índice [2]
+    print(lista_ex01[2])      # Exibirá 'frutas'
+    lista_ex01[2] = 'abacaxi' # Mudará 'frutas' para 'abacaxi'
+    print(lista_ex01[2])      # Exibirá 'abacaxi' como novo item do índice [2]
     print('---------------------------------------\n')
 
     '''
     Abaixo veremos como conferir se determinado item existe na lista:
     '''
     print('Temos abacaxi aqui?')
-    if 'abacaxi' in listaex01:
+    if 'abacaxi' in lista_ex01:
         print('Tem sim! Hora de fazer um suquinho de abacaxi~')
     else:
         print('Eita, tem não... Vou ter de me contentar com ki-suco... :´(')
@@ -122,33 +122,33 @@ def lists(integers, reals, words, sentence):
     Vimos um exemplo acima, confira mais um logo abaixo:
     '''
 
-    listaex02 = ['pera', 'uva', 'maçã', 'salada mista', str1, str2, str3, str4, str5]
-    print(f'Lista exemplo: {listaex02}')
+    lista_ex02 = ['pera', 'uva', 'maçã', 'salada mista', str1, str2, str3, str4, str5]
+    print(f'Lista exemplo: {lista_ex02}')
     print('---------------------------------------\n')
 
-    listaex02[3] = 'melancia'
-    print(f'Quarto item modificado: {listaex02}')
+    lista_ex02[3] = 'melancia'
+    print(f'Quarto item modificado: {lista_ex02}')
     print('---------------------------------------\n')
     ''' O quarto item (salada mista) agora é 'melancia'
 
     Podemos também modificar mais de um item da lista ao mesmo tempo: '''
     
-    listaex02[0:4] = ['dois hamburgueres', 'alface', 'queijo', 'molho especial']
-    print(f'Receita MC: {listaex02}')
+    lista_ex02[0:4] = ['dois hamburgueres', 'alface', 'queijo', 'molho especial']
+    print(f'Receita MC: {lista_ex02}')
     print('---------------------------------------\n')
     ''' Modificamos os itens de 1 à 4 para os itens acima.
     Mas estão faltando alguns, poderíamos tê-los inserido como abaixo: '''
 
-    listaex02[0:4] = ['dois hamburgueres', 'alface', 'queijo', 'molho especial', 'cebola', 'picles', 'pão com gergelim']
-    print(f'Receita MC completa: {listaex02}')
+    lista_ex02[0:4] = ['dois hamburgueres', 'alface', 'queijo', 'molho especial', 'cebola', 'picles', 'pão com gergelim']
+    print(f'Receita MC completa: {lista_ex02}')
     print('--------------------------------------\n')
     ''' Os itens extras são inseridos após o último item indexado, e antes dos restantes.
     O resultado final terá a receita completa + as 5 strings informadas.
 
     Mas e se eu odiar MC e quiser outra coisa no lugar? '''
 
-    listaex02[0:7] = ['cuscuz', 'charque', 'vinagrete']
-    print(f'Refeição de respeito: {listaex02}')
+    lista_ex02[0:7] = ['cuscuz', 'charque', 'vinagrete']
+    print(f'Refeição de respeito: {lista_ex02}')
     print('---------------------------------------\n')
     # Os elementos não reescritos são eliminados, e os que estavam após estes são trazidos para frente.
 
@@ -236,4 +236,4 @@ def lists(integers, reals, words, sentence):
     print('---------------------------------------\n')
 
 
-    retornoIndice.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(integers, reals, words, sentence)

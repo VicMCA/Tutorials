@@ -1,4 +1,4 @@
-import indice
+import modulo_indice
 
 def retorno(integers, reals, words, sentence):
     """
@@ -7,6 +7,6 @@ def retorno(integers, reals, words, sentence):
     back = str(input('\nVoltar para o indice? s/n >> '))
 
     if back == 's':
-        indice.indice(integers, reals, words, sentence)
+        modulo_indice.indice(integers, reals, words, sentence)
     else:
         exit('Okay, saindo do exemplo. Até mais~')
