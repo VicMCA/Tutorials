@@ -81,6 +81,9 @@ Instruções para git
 |>> `git log --all`  
 *   Exibe todos os detalhes dos últimos commits realizados. Pode combinar com --online  
   
+|>> `git log --oneline --graph`  
+*   Exibe gráfico das mudanças
+  
 |>> `git diff codigoDoCommit`  
 *   Exibe as diferenças do arquivo atual para a versão do código  
   
