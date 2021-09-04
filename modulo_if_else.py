@@ -1,6 +1,10 @@
 import modulo_retorno
 
-def ifelse(integers, reals, words, sentence):
+def ifelse(
+    integers=[3, 5, 8, 13, 21], 
+    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
+    words=["bike", "kitten", "banana", "plant", "laptop"], 
+    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
     """
     Aqui veremos como utilizar os argumentos If e Else.
     """
@@ -114,3 +118,7 @@ def ifelse(integers, reals, words, sentence):
     '''E isso é tudo sobre sistemas de decisão com If, Else e Elif.'''
 
     modulo_retorno.retorno(integers, reals, words, sentence)
+
+
+if __name__ == '__main__':
+    ifelse()

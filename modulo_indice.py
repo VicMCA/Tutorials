@@ -3,7 +3,11 @@ import modulo_retorno, modulo_bool, modulo_classe, modulo_date_time, \
     modulo_input, modulo_lista, modulo_math, modulo_objeto, modulo_set, \
     modulo_string, modulo_tipos, modulo_tupla, modulo_while
 
-def indice(integers, reals, words, sentence):
+def indice(
+    integers=[3, 5, 8, 13, 21], 
+    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
+    words=["bike", "kitten", "banana", "plant", "laptop"], 
+    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
     """
     Aqui temos o índice por completo, para melhor organização.
     """
@@ -70,3 +74,7 @@ def indice(integers, reals, words, sentence):
         modulo_extras.extras(integers, reals, words, sentence)
     else:
         exit('Okay, saindo do exemplo. Até mais~')
+
+
+if __name__ == '__main__':
+    indice()

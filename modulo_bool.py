@@ -1,6 +1,10 @@
 import modulo_retorno
 
-def boolean(integers, reals, words, sentence):
+def boolean(
+    integers=[3, 5, 8, 13, 21], 
+    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
+    words=["bike", "kitten", "banana", "plant", "laptop"], 
+    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
     """
     Nesta seção, veremos como funcionam operadores booleanos.
     """
@@ -107,3 +111,8 @@ def boolean(integers, reals, words, sentence):
     print('E isso é tudo sobre operações booleanas.')
 
     modulo_retorno.retorno(integers, reals, words, sentence)
+
+
+if __name__ == '__main__':
+    boolean()
+    

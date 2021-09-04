@@ -1,6 +1,10 @@
 import modulo_retorno
 
-def math(integers, reals, words, sentence):
+def math(
+    integers=[3, 5, 8, 13, 21], 
+    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
+    words=["bike", "kitten", "banana", "plant", "laptop"], 
+    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
     """
     Esta função serve para exemplo de diversas operações matemáticas possíveis e suas sintaxes.
     """
@@ -67,10 +71,17 @@ def math(integers, reals, words, sentence):
     print(f'Percentual "{a} por cento de {d}: ({a} / 100) * {d} = {(a / 100) * d}\n'
     +f'Percentual "{z} por cento de {c}: ({z} / 100) * {c} = {(z / 100) * c}\n')
 
-    # Para arredondamento, usamos a função round(n1, n2)
-    print(f'Arredondamento: round({w} * {x} + {y} / {z}, 2) = {round(w * x + y / z, 2)}\n'
+    # Para arredondamento, usamos a função round(n1, n2), onde n1 é o número, 
+    # e n2 a quantidade de casas decimais.
+    print(f'Arredondamento com round: round({w} * {x} + {y} / {z}, 2) = {round(w * x + y / z, 2)}\n'
+    # Podemos também utilizar o formato var:.nf, onde n é o número de casas  decimais.
+    +f'Arredondamento com ":.2f": ({w} * {x} + {y} / {z}):.2f = {(w * x + y / z):.2f}\n'
     +f'Sem arredondamento: ({w} * {x} + {y} / {z}, 2) = {w * x + y / z}\n')
 
     print('E isso é tudo sobre operações aritméticas.')
 
     modulo_retorno.retorno(integers, reals, words, sentence)
+
+
+if __name__ == '__main__':
+    math()
