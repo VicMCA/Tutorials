@@ -1,10 +1,10 @@
 import modulo_retorno
 
-def types(
-    integers=[3, 5, 8, 13, 21], 
-    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
-    words=["bike", "kitten", "banana", "plant", "laptop"], 
-    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
+def types( package = {
+    'inteiros': [3, 5, 8, 13, 21], 
+    'reais': [1.5, 2.4, 5.3, 7.2, 10.5], 
+    'palavras': ["bike", "kitten", "banana", "plant", "laptop"], 
+    'frase': "I threw my tablet at a banana tree and a kitten fell on my bike" } ):
     """
     Aqui veremos como manipular tipos.
     """
@@ -14,10 +14,10 @@ def types(
     Antes de começarmos, vamos importar os valores de antes e converter para uma forma
     mais prática: '''
 
-    a, b, c, d, e = [int(x) for x in integers]
-    v, w, x, y, z = [float(x) for x in reals]
-    str1, str2, str3, str4, str5 = [str(x) for x in words]
-    frase = sentence
+    a, b, c, d, e = [int(x) for x in package['inteiros']]
+    v, w, x, y, z = [float(x) for x in package['reais']]
+    str1, str2, str3, str4, str5 = [str(x) for x in package['palavras']]
+    frase = package['frase']
 
     '''Em Python trabalhamos com diversos tipos de dados diferentes.
     Abaixo, uma lista deles para fins de curiosidade:
@@ -51,8 +51,8 @@ def types(
     print(y, ' = ', type(y))
     print(v, ' = ', type(v))
     print(frase, ' = ', type(frase))
-    print(integers, ' = ', type(integers))
-    print(words, ' = ', type(words))
+    print(package['inteiros'], ' = ', type(package['inteiros']))
+    print(package['palavras'], ' = ', type(package['palavras']))
 
     '''Neste exemplo vamos conferir o que é "Casting".
     Casting é basicamente converter um tipo para o outro.
@@ -77,7 +77,7 @@ def types(
 
     '''Isto encerra o conteúdo sobre tipos.'''
 
-    modulo_retorno.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(package)
 
 
 if __name__ == '__main__':

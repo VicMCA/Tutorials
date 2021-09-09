@@ -1,10 +1,10 @@
 import modulo_retorno
 
-def boolean(
-    integers=[3, 5, 8, 13, 21], 
-    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
-    words=["bike", "kitten", "banana", "plant", "laptop"], 
-    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
+def boolean( package = {
+    'inteiros': [3, 5, 8, 13, 21], 
+    'reais': [1.5, 2.4, 5.3, 7.2, 10.5], 
+    'palavras': ["bike", "kitten", "banana", "plant", "laptop"], 
+    'frase': "I threw my tablet at a banana tree and a kitten fell on my bike" } ):
     """
     Nesta seção, veremos como funcionam operadores booleanos.
     """
@@ -15,10 +15,10 @@ def boolean(
     Abaixo, vamos conferir o principal para utilizarmos estes comparativos, mas antes,
     vamos importar as variáveis declaradas no começo para usarmos:
     '''
-    a, b, c, d, e = [int(x) for x in integers]
-    v, w, x, y, z = [float(x) for x in reals]
-    str1, str2, str3, str4, str5 = [str(x) for x in words]
-    frase = sentence
+    a, b, c, d, e = [int(x) for x in package['inteiros']]
+    v, w, x, y, z = [float(x) for x in package['reais']]
+    str1, str2, str3, str4, str5 = [str(x) for x in package['palavras']]
+    frase = package['frase']
 
     '''
     Para conferir se uma expressão é igual, maior ou menor que outra,
@@ -110,7 +110,7 @@ def boolean(
 
     print('E isso é tudo sobre operações booleanas.')
 
-    modulo_retorno.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(package)
 
 
 if __name__ == '__main__':

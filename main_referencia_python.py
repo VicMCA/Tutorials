@@ -42,12 +42,19 @@ def main():
     palavras = ('pêra', 'duas uvas', 'maçã', 'salada mista', 'roma')
     frase = 'o rato roeu a roupa do rei de roma'
 
+    pacote = {
+        'inteiros': inteiros,
+        'reais': reais,
+        'palavras': palavras,
+        'frase': frase
+    }
+
     start = str(input('Muito bem! Vamos agora conferir o índice? s/n >> '))
 
     if start == 'n':
         exit('Okay, saindo do exemplo. Até mais~')
 
-    modulo_indice.indice(inteiros, reais, palavras, frase)
+    modulo_indice.indice(pacote)
 
 
 if __name__ == '__main__':

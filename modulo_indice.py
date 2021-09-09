@@ -3,11 +3,11 @@ import modulo_retorno, modulo_bool, modulo_classe, modulo_date_time, \
     modulo_input, modulo_lista, modulo_math, modulo_objeto, modulo_set, \
     modulo_string, modulo_tipos, modulo_tupla, modulo_while
 
-def indice(
-    integers=[3, 5, 8, 13, 21], 
-    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
-    words=["bike", "kitten", "banana", "plant", "laptop"], 
-    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
+def indice( package = {
+    'inteiros': [3, 5, 8, 13, 21], 
+    'reais': [1.5, 2.4, 5.3, 7.2, 10.5], 
+    'palavras': ["bike", "kitten", "banana", "plant", "laptop"], 
+    'frase': "I threw my tablet at a banana tree and a kitten fell on my bike" } ):
     """
     Aqui temos o índice por completo, para melhor organização.
     """
@@ -39,39 +39,39 @@ def indice(
     index = str(input('\nPara qual exemplo deseja ir? Digite um número inteiro de 1 à 18:\n>> '))
 
     if index == '1':
-        modulo_math.math(integers, reals, words, sentence)
+        modulo_math.math(package)
     elif index == '2':
-        modulo_string.string(integers, reals, words, sentence)
+        modulo_string.string(package)
     elif index == '3':
-        modulo_bool.boolean(integers, reals, words, sentence)
+        modulo_bool.boolean(package)
     elif index == '4':
-        modulo_tipos.types(integers, reals, words, sentence)
+        modulo_tipos.types(package)
     elif index == '5':
-        modulo_if_else.ifelse(integers, reals, words, sentence)
+        modulo_if_else.ifelse(package)
     elif index == '6':
-        modulo_while.loop_while(integers, reals, words, sentence)
+        modulo_while.loop_while(package)
     elif index == '7':
-        modulo_for.loop_for(integers, reals, words, sentence)
+        modulo_for.loop_for(package)
     elif index == '8':
-        modulo_lista.lists(integers, reals, words, sentence)
+        modulo_lista.lists(package)
     elif index == '9':
-        modulo_set.sets(integers, reals, words, sentence)
+        modulo_set.sets(package)
     elif index == '10':
-        modulo_tupla.tuples(integers, reals, words, sentence)
+        modulo_tupla.tuples(package)
     elif index == '11':
-        modulo_dicionario.dicionary(integers, reals, words, sentence)
+        modulo_dicionario.dicionary(package)
     elif index == '12':
-        modulo_input.inputs(integers, reals, words, sentence)
+        modulo_input.inputs(package)
     elif index == '13':
-        modulo_funcao.functions(integers, reals, words, sentence)
+        modulo_funcao.functions(package)
     elif index == '14':
-        modulo_objeto.objects(integers, reals, words, sentence)
+        modulo_objeto.objects(package)
     elif index == '15':
-        modulo_classe.classes(integers, reals, words, sentence)
+        modulo_classe.classes(package)
     elif index == '16':
-        modulo_date_time.datetime(integers, reals, words, sentence)
+        modulo_date_time.datetime(package)
     elif index == '18':
-        modulo_extras.extras(integers, reals, words, sentence)
+        modulo_extras.extras(package)
     else:
         exit('Okay, saindo do exemplo. Até mais~')
 

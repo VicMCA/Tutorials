@@ -1,18 +1,18 @@
 import modulo_retorno
 
-def math(
-    integers=[3, 5, 8, 13, 21], 
-    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
-    words=["bike", "kitten", "banana", "plant", "laptop"], 
-    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
+def math( package = {
+    'inteiros': [3, 5, 8, 13, 21], 
+    'reais': [1.5, 2.4, 5.3, 7.2, 10.5], 
+    'palavras': ["bike", "kitten", "banana", "plant", "laptop"], 
+    'frase': "I threw my tablet at a banana tree and a kitten fell on my bike" } ):
     """
     Esta função serve para exemplo de diversas operações matemáticas possíveis e suas sintaxes.
     """
 
     print('\nBem vindo(a) à seção de Operações Matemáticas\n')
 
-    a, b, c, d, e = [int(x) for x in integers]
-    v, w, x, y, z = [float(x) for x in reals]
+    a, b, c, d, e = [int(x) for x in package['inteiros']]
+    v, w, x, y, z = [float(x) for x in package['reais']]
 
     # Acima estamos criando variáveis a partir de elementos em uma lista. Vemos isso em outro módulo.
 
@@ -80,7 +80,7 @@ def math(
 
     print('E isso é tudo sobre operações aritméticas.')
 
-    modulo_retorno.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(package)
 
 
 if __name__ == '__main__':

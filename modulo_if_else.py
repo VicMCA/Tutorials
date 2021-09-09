@@ -1,10 +1,10 @@
 import modulo_retorno
 
-def ifelse(
-    integers=[3, 5, 8, 13, 21], 
-    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
-    words=["bike", "kitten", "banana", "plant", "laptop"], 
-    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
+def ifelse( package = {
+    'inteiros': [3, 5, 8, 13, 21], 
+    'reais': [1.5, 2.4, 5.3, 7.2, 10.5], 
+    'palavras': ["bike", "kitten", "banana", "plant", "laptop"], 
+    'frase': "I threw my tablet at a banana tree and a kitten fell on my bike" } ):
     """
     Aqui veremos como utilizar os argumentos If e Else.
     """
@@ -33,10 +33,10 @@ def ifelse(
     Vamos experimentar abaixo após importarmos os dados informados anteriormente:
     '''
 
-    a, b, c, d, e = [int(x) for x in integers]
-    v, w, x, y, z = [float(x) for x in reals]
-    str1, str2, str3, str4, str5 = [str(x) for x in words]
-    frase = sentence
+    a, b, c, d, e = [int(x) for x in package['inteiros']]
+    v, w, x, y, z = [float(x) for x in package['reais']]
+    str1, str2, str3, str4, str5 = [str(x) for x in package['palavras']]
+    frase = package['frase']
 
     'Vamos criar abaixo algumas decisões a serem tomadas com os elementos informados.'
 
@@ -117,7 +117,7 @@ def ifelse(
 
     '''E isso é tudo sobre sistemas de decisão com If, Else e Elif.'''
 
-    modulo_retorno.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(package)
 
 
 if __name__ == '__main__':

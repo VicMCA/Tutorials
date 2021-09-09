@@ -1,17 +1,17 @@
 import modulo_retorno
 
-def loopfor(
-    integers=[3, 5, 8, 13, 21], 
-    reals=[1.5, 2.4, 5.3, 7.2, 10.5], 
-    words=["bike", "kitten", "banana", "plant", "laptop"], 
-    sentence="I threw my tablet at a banana tree and a kitten fell on my bike"):
+def loopfor( package = {
+    'inteiros': [3, 5, 8, 13, 21], 
+    'reais': [1.5, 2.4, 5.3, 7.2, 10.5], 
+    'palavras': ["bike", "kitten", "banana", "plant", "laptop"], 
+    'frase': "I threw my tablet at a banana tree and a kitten fell on my bike" } ):
     """
     Aqui veremos como utilizar o loop For.
     """
     print('\nBem vindo(a) à seção do Loop For\n')
 
-    a, b, c, d, e = [float(x) for x in input('Informe 5 números quaisquer de 0 a 10 separados por espaço: ').split()]
-    str1, str2, str3, str4, str5 = input('Informe cinco palavras de no mínimo 4 letras, separadas por espaço: ').split()
+    a, b, c, d, e = [float(x) for x in package['inteiros']]
+    str1, str2, str3, str4, str5 = [str(x) for x in package['palavras']]
 
     '''
     Enquanto o while é utilizado para iterar um código de acordo com um número arbitrário de vezes,
@@ -145,7 +145,7 @@ def loopfor(
 
     'E com isso encerramos o conteúdo sobre Loops de For.'
 
-    modulo_retorno.retorno(integers, reals, words, sentence)
+    modulo_retorno.retorno(package)
 
 
 if __name__ == '__main__':
