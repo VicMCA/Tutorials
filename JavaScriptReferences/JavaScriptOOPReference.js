@@ -1,6 +1,6 @@
 /*
 Quick reference guide on how to use classes and objects in JavaScript.
-We take a look at the structure of objects, classes, inheritance, getters
+We'll take a look at the structure of objects, classes, inheritance, getters
 and setters, methods and how to use them in a basic way.
 */
 
@@ -8,23 +8,25 @@ const objSquare = {                             // Creating an object. Using "co
     length: 5,
     vertices: 4,                                // Normal properties
     color: "green",
-    location: { x: 0, y: 0 },                   // Using an object as property
+    location: { x: 0, y: 0 },                   // Using an object as a property
 
-    draw() {                                    // Method for this object
+    draw() {                                    // A method of the object
         return (`I'm a ${this.vertices}-sided polygon, and my sides have ${this.length}mm in length.`
         + `\nMy color is ${this.color} and I'm located at ${this.location.x} ${this.location.y}.`)
     }
 }
 
 class Polygon {                                 // Class creation
+
     #ImSecret = "I'm a private property";       // This is a private property
+
     constructor(length, vertices) {             // Class' constructor with parameters
         this._length = length;                  // Normal properties from parameters
-        this._vertices = vertices;              // Use of "this" keyword is needed to reference the objects
-        this._location = { x: 0, y: 0 };        // An object used as property
+        this._vertices = vertices;              // Use of "this" keyword is needed to reference the created objects
+        this._location = { x: 0, y: 0 };        // An object used as a property
     }
     get location() {                            // Getter function, called without brackets when used
-        return this._location;                  // The "_" is to generate another variable, so as to not create a stack overflow
+        return this._location;                  // The "_" is to generate another variable, so as to not induce a stack overflow
     }
     set location(newLocation) {                 // Setter function, also called without brackets when used
         this._location = newLocation;           // Again, we use "_" to avoid a stack overflow
@@ -43,7 +45,7 @@ class Polygon {                                 // Class creation
     }
 }
 
-class ColorPolygon extends Polygon {          // Class extended from previous class
+class ColorPolygon extends Polygon {            // Class extended from previous class
     constructor(length, vertices, color) {      // The constructor needs the basic parameters + any new ones
         super(length, vertices);                // We call the parent class' parameters using "super()"
         this._color = color;                    // New parameters are attributed after that
@@ -104,9 +106,6 @@ function main() {
     console.table(colorSquare);                 // Printing to a table to see every difference
 }
 
-
 if (require.main === module) {
     main();
 }
-
-
